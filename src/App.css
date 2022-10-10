@@ -1,38 +1,213 @@
-.App {
+body {
+  background: #dff6ff;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
+    "Lucida Grande", sans-serif;
+  ;
+}
+
+h1 {
+  border-bottom: 0.125rem solid #6fb2d2;
+  color: #019267;
+  margin: 1.25rem 0;
+  padding-bottom: 0.625rem;
+  text-align: center;
+
+
+}
+
+h2 {
+  border-bottom: 0.125rem;
+  color: #019267;
+  margin: 1.25rem 0;
+  padding-bottom: 0.625rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.strike {
+  text-decoration: line-through;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* input field */
+.input {
+  border: 0;
+  border-bottom: 0.125rem solid grey;
+  background: transparent;
+  position: relative;
+  margin-top: 0.625rem;
+  margin: auto;
+  margin-left: 35%;
+  padding: 0.75rem;
+  outline: 0;
+  transition: 0.2s;
+  width: 30%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+/*Add button */
+
+.push {
+  background-color: #85c88a;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.3125rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  height: 2.625rem;
+  position: relative;
+  outline: none;
+  width: 10%;
+
+
+
+}
+
+/*manual task */
+
+#myUL {
+  font-size: 5rem;
+}
+
+/*pill for new list items*/
+li {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+  background: #fff;
+  color: #019267;
+  ;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: bold;
+  height: 5.625rem;
+  list-style-type: none;
+  margin-bottom: 1rem;
+  padding: 0.3125rem 0.625rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin-top: -1.125rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*delete button */
+.btn {
+
+  font-size: 1rem;
+  background-color: #85c88a;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  height: 1.25rem;
+  border-radius: 1.25rem;
+  margin-left: 92%;
+
+  /* margin-top: 1.875rem; */
+  position: relative;
+}
+
+/* ADDED JUNE */
+.exit-button {
+  border: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.3125rem;
+  line-height: 0.875rem;
+  min-width: auto;
+  background-color: #dff6ff;
+}
+
+
+#cancel,
+#continue {
+  align-items: center;
+  height: 3.25rem;
+  width: 18.25rem;
+  margin: 1.25rem;
+}
+
+#action-buttons {
+  margin-top: 8rem;
+  display: flex;
+}
+
+
+
+#todo-dialog,
+#empty-task-dialog {
+  border: 0.0625rem black;
+  background-color: #dff6ff;
+  border-radius: 25px;
+  position: fixed !important;
+  top: 12.5rem !important;
+
+}
+
+#todo-dialog {
+  width: 40%;
+  height: 20%;
+}
+
+
+#empty-task-message,
+#toDoTitle {
+  padding: 2.4375rem;
+}
+
+
+/* modal button */
+
+.modal {
+  border: 8px solid #019267;
+  background-color: rgb(255, 255, 255);
+  height: 195px;
+  width: 290px;
+  border-radius: 25px;
+  margin-left: 800px;
+  position: fixed !important;
+
+}
+.modal::backdrop {
+  background: rgba(34, 255, 0, 0.25);
+}
+
+
+.close-button {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  color: #019267;
+  margin-left: 241px;
+  font-size: 25px;
+}
+
+.emptyDialogText {
+  margin: 1.25rem 0;
+  padding-bottom: 0.625rem;
+  text-align: center;
+  font-size: x-large;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.button {
+  background: green;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.button:hover {
+  background: orange;
 }
