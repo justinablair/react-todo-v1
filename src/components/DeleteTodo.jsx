@@ -1,22 +1,20 @@
 import React from "react";
 
-function DeleteTodo({openModel, isOpen,removeTodo}) {
-   
+function DeleteTodo({openModal, isDeleteTodoOpen,, closeModal}) {
+
   return (
     <div>
 
-{isOpen && (
+{isDeleteTodoOpen && (
           <div className="modal"  disableBackdrop="true" >
-            <button onClick={openModel} className="close-button">
+            <button onClick={openModal} className="close-button">
               x
             </button>
             <p className="emptyDialogText">Are you sure you want to delete this todo</p>
-            <button id="continue-button">continue</button>
-            <button id="cancel-button">cancel</button>
+            <button id="continue-button" onClick={removeTodo}>continue</button>
+            <button id="cancel-button" onClick={closeModal}>cancel</button>
           </div>
         )}
-        
-      <button className="btn" onClick={removeTodo}>x</button>
     </div>
 
     
